@@ -1,4 +1,2 @@
 .env
-docker-compose.yaml
-simple_producer.ipynb
-как запустить кафку.txt
+docker-compose-experiment.yaml

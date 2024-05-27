@@ -1,5 +1,6 @@
 .env
 docker-compose.yaml
+docker-compose-experiment.yaml
 simple_producer.ipynb
 README.md
 .gitignore
