@@ -1,0 +1,4 @@
+python-dotenv==1.0.1
+aiogram==3.6.0
+aiokafka==0.10.0
+PyYAML==6.0.1

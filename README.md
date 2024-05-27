@@ -1,2 +1,8 @@
-# tg_bot_kafka
-Телеграмм бот, отправляющий в чаты сообщения, приходящие в kafka
+Пример необходимых переменных окружения для запуска проекта:
+
+```
+BOT_TOKEN="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+CHAT_IDS=["111111","222222"]
+KAFKA_BOOTSTRAP_SERVERS="localhost:9092"
+KAFKA_TOPIC="tg_bot"
+```
