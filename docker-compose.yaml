@@ -1,4 +1,5 @@
 version: "3.9"
+
 services:
   zookeeper:
     image: wurstmeister/zookeeper
@@ -38,14 +39,15 @@ services:
       timeout: 5s
       retries: 10
       
-  kafdrop:
-    image: obsidiandynamics/kafdrop
-    container_name: kafdrop
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: traffic_kafka_ui
     restart: always
     ports:
-      - "9000:9000"
+      - "9001:8080"
     environment:
-      KAFKA_BROKERCONNECT: "kafka:29092"
+      KAFKA_CLUSTERS_0_NAME: "local"
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "kafka:29092"
     depends_on:
       - kafka
 
