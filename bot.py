@@ -35,6 +35,7 @@ async def consume_kafka_messages():
     # Инициализация Kafka Consumer внутри асинхронной функции
     consumer = AIOKafkaConsumer(
         KAFKA_TOPIC,
+        group_id ="bot_reader",
         bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS,
         value_deserializer=lambda m: json.loads(m.decode('utf-8'))
     )
